@@ -32,10 +32,20 @@ var fruits = ["Orange", "Mango", "Pear"];
 fruits.unshift("Apple"); // returns the new length of the array
 console.log("Add a new element at the beginning of the array", fruits);
 
-// splice() method: Adding new elements using the splice() method
+// splice() method: Adding new elements to an array using the splice() method
 var items = ["Banana", "Orange", "Apple", "Mango"];
 items.splice(2, 0, "Lemon", "Pear");
 console.log("Add new elements at index 2: ", items);
 
+var items = ["Banana", "Orange", "Apple", "Mango"];
 items.splice(-1, 0, "Kiwi");
 console.log("Add new element at index -1 counting from right to left: ", items);
+
+// splice() method: Removing elements from an array using the splice() method
+var itemsSold = ["Butter", "Chocolate", "Milk", "Bread", "Oil", "Rice"];
+itemsSold.splice(1, 2); // returns empty array since no element was removed
+console.log("Remove 2 items starting from index 1 (left to right):", itemsSold);
+
+var itemsSold = ["Butter", "Chocolate", "Milk", "Bread", "Oil", "Rice"];
+itemsSold.splice(-2, 1);
+console.log("Remove second item from right to left", itemsSold);

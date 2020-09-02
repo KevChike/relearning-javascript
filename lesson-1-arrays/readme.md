@@ -175,8 +175,25 @@ fruits.splice(2, 0, "Lemon", "Pear"); // returns empty array since no element wa
 
 - The first parameter defines the position (i.e. index) where the new elements should be added (i.e. **spliced in**)
   _(The counting starts from the left to right if the parameter is a positive number. In this case, the first element on the array is seen as 0 while counting towards the right. If the parameter is a negative number, it will start counting from the right to left of the array starting with the last element of the array as 0, while the next element to it on the left will be since as -1 and so on.)_
-- The second parameter defines how many elements should be removed from the right,
-  where the array was **spliced**.
+- The second parameter defines how many elements should be removed from the index that was stated. **Note:** The
+  second parameter can **ONLY** be a positive number for it to work properly.
 - The rest of the parameters define the new elements to be add.
 
 From the above example, `('Lemon', 'Pear')` will be added before `'Apple'`
+
+**Using splice() method to remove elements from an array**
+_Example_
+
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango", "Pear", "Pineapple"];
+fruits.splice(1, 2); // returns the removed elements ['orange', 'apple']
+```
+
+From the above example, the array will have only 4 elements left in it, which are;
+"Banana", "Mango", "Pear", "Pineapple".
+
+The count starts from the left to the right of the array. The deletion starts from
+the index that is stated as the **first parameter** and it removes 2 elements starting
+from the index that is stated as the **first parameter**.
+If the **first parameter** is a negative number, then the count as usual starts from
+right to left of the array.
