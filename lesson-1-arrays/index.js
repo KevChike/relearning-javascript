@@ -31,3 +31,11 @@ console.log("Removes the last element", persons);
 var fruits = ["Orange", "Mango", "Pear"];
 fruits.unshift("Apple"); // returns the new length of the array
 console.log("Add a new element at the beginning of the array", fruits);
+
+// splice() method: Adding new elements using the splice() method
+var items = ["Banana", "Orange", "Apple", "Mango"];
+items.splice(2, 0, "Lemon", "Pear");
+console.log("Add new elements at index 2: ", items);
+
+items.splice(-1, 0, "Kiwi");
+console.log("Add new element at index -1 counting from right to left: ", items);

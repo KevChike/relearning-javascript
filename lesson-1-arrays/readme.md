@@ -63,7 +63,7 @@ JavaScript as an array not object.
 
 ## Array Properties and Method
 
-- ### The length property
+### The length property
 
 The `length` property in JavaScript return the total number of elements in an array.
 
@@ -89,10 +89,10 @@ console.log(last)
 Ferrari
 ```
 
-- ### push()
+### push()
 
-The easiest way to add a new element to an array is by using the `push()` method.
-The `push()` method adds a new element to the end of the array and returns the
+The easiest way to add new elements to an array is by using the `push()` method.
+The `push()` method add new elements to the end of the array and returns the
 new length of the array.
 
 **Example**
@@ -105,7 +105,7 @@ cars.push('Benz'); // returns 5
 console.log(cars);
 ```
 
-- ### pop()
+### pop()
 
 The `pop()` method remove the last element from an array. This method returns the
 last element that was removed
@@ -124,9 +124,9 @@ console.log(cars);
 end of the array. If we are to build a stack (Last-in-first-out), both `pop()`
 and `push()` will be used for that purpose.
 
-- ### unshift()
+### unshift()
 
-The `unshift()` method adds a new element at the beginning of an array. It returns
+The `unshift()` method add new elements at the beginning of an array. It returns
 the new length of the array. The `unshift()` method works like the `push()` method
 but it works at the beginning of an array unlike the `push()` method the works at
 the end of an array.
@@ -141,7 +141,7 @@ cars.unshift('Benz'); // returns 5
 console.log(cars);
 ```
 
-- ### shift()
+### shift()
 
 The `shift()` method removes an element from the beginning of an array. It returns
 the element that was removed from the array. The `shift()` method works like the
@@ -157,3 +157,26 @@ cars.shift(); // return "Ferrari"
 // if we display the entire elements in the array, we will be unable to  should see "Ferrari"
 console.log(cars);
 ```
+
+### splice()
+
+The `splice()` method is used to add and/or remove elements from an array. This
+method add and/or remove elements from any position on the array, as specified
+in the method. The splice method will return an array of the elements that were removed if any.
+It will return an empty array `[]` if no element was removed.
+
+**Using splice() method to add elements to an array**
+_Example_
+
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Pear"); // returns empty array since no element was removed
+```
+
+- The first parameter defines the position (i.e. index) where the new elements should be added (i.e. **spliced in**)
+  _(The counting starts from the left to right if the parameter is a positive number. In this case, the first element on the array is seen as 0 while counting towards the right. If the parameter is a negative number, it will start counting from the right to left of the array starting with the last element of the array as 0, while the next element to it on the left will be since as -1 and so on.)_
+- The second parameter defines how many elements should be removed from the right,
+  where the array was **spliced**.
+- The rest of the parameters define the new elements to be add.
+
+From the above example, `('Lemon', 'Pear')` will be added before `'Apple'`
