@@ -88,3 +88,72 @@ console.log(last)
 // Output
 Ferrari
 ```
+
+### push()
+
+The easiest way to add a new element to an array is by using the `push()` method.
+The `push()` method adds a new element to the end of the array and returns the
+new length of the array.
+
+**Example**
+
+```
+var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+cars.push('Benz'); // returns 5
+
+// if we display the entire elements in the array, we should see 'Benz' at the end of the array
+console.log(cars);
+```
+
+### pop()
+
+The `pop()` method remove the last element from an array. This method returns the
+last element that was removed
+
+**Example**
+
+```
+var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+cars.pop(); // return "Ferrari"
+
+// if we display the entire elements in the array, we will be unable to  should see "Ferrari"
+console.log(cars);
+```
+
+**NOTE:** The `push()` and `pop()` methods performs all their functions at the
+end of the array. If we are to build a stack (Last-in-first-out), both `pop()`
+and `push()` will be used for that purpose.
+
+### unshift()
+
+The `unshift()` method adds a new element at the beginning of an array. It returns
+the new length of the array. The `unshift()` method works like the `push()` method
+but it works at the beginning of an array unlike the `push()` method the works at
+the end of an array.
+
+**Example**
+
+```
+var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+cars.unshift('Benz'); // returns 5
+
+// if we display the entire elements in the array, we should see 'Benz' at the end of the array
+console.log(cars);
+```
+
+### shift()
+
+The `shift()` method removes an element from the beginning of an array. It returns
+the element that was removed from the array. The `shift()` method works like the
+`pop()` method but only works at the beginning of an array, unlike the `pop()`
+method that works at the ending of an array.
+
+**Example**
+
+```
+var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+cars.shift(); // return "Ferrari"
+
+// if we display the entire elements in the array, we will be unable to  should see "Ferrari"
+console.log(cars);
+```

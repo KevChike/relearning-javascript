@@ -16,3 +16,18 @@ console.log("The length of the car array is: ", cars.length);
 var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
 var last = cars[cars.length - 1];
 console.log("The last element of the array is: ", last);
+
+// push() method: Adding new element to the end of an array
+var people = ["Mary", "Ben", "Lisa"];
+people.push("Jenny"); // returns the new length of the array
+console.log("Added a new element at the end of the array", people);
+
+// pop() method: Removes the last element from an array
+var persons = ["Josh", "Kelly", "Ann", "Moses"];
+persons.pop(); // returns "Moses"
+console.log("Removes the last element", persons);
+
+// unshift() method: Add a new element to the beginning of an array
+var fruits = ["Orange", "Mango", "Pear"];
+fruits.unshift("Apple"); // returns the new length of the array
+console.log("Add a new element at the beginning of the array", fruits);
