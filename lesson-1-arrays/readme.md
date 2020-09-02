@@ -63,7 +63,7 @@ JavaScript as an array not object.
 
 ## Array Properties and Method
 
-### The length property
+- ### The length property
 
 The `length` property in JavaScript return the total number of elements in an array.
 
@@ -89,7 +89,7 @@ console.log(last)
 Ferrari
 ```
 
-### push()
+- ### push()
 
 The easiest way to add a new element to an array is by using the `push()` method.
 The `push()` method adds a new element to the end of the array and returns the
@@ -105,7 +105,7 @@ cars.push('Benz'); // returns 5
 console.log(cars);
 ```
 
-### pop()
+- ### pop()
 
 The `pop()` method remove the last element from an array. This method returns the
 last element that was removed
@@ -124,7 +124,7 @@ console.log(cars);
 end of the array. If we are to build a stack (Last-in-first-out), both `pop()`
 and `push()` will be used for that purpose.
 
-### unshift()
+- ### unshift()
 
 The `unshift()` method adds a new element at the beginning of an array. It returns
 the new length of the array. The `unshift()` method works like the `push()` method
@@ -141,7 +141,7 @@ cars.unshift('Benz'); // returns 5
 console.log(cars);
 ```
 
-### shift()
+- ### shift()
 
 The `shift()` method removes an element from the beginning of an array. It returns
 the element that was removed from the array. The `shift()` method works like the
