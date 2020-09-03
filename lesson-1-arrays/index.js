@@ -20,43 +20,60 @@ console.log("The last element of the array is: ", last);
 // push() method: Adding new element to the end of an array
 var people = ["Mary", "Ben", "Lisa"];
 people.push("Jenny"); // returns the new length of the array
-console.log("Added a new element at the end of the array", people);
+console.log("push() example 1: ", people);
 
 // pop() method: Removes the last element from an array
 var persons = ["Josh", "Kelly", "Ann", "Moses"];
 persons.pop(); // returns "Moses"
-console.log("Removes the last element", persons);
+console.log("pop() example 1: ", persons);
 
 // unshift() method: Add a new element to the beginning of an array
 var fruits = ["Orange", "Mango", "Pear"];
 fruits.unshift("Apple"); // returns the new length of the array
-console.log("Add a new element at the beginning of the array", fruits);
+console.log("unshift() example 1: ", fruits);
 
 // splice() method: Adding new elements to an array using the splice() method
 var items = ["Banana", "Orange", "Apple", "Mango"];
 items.splice(2, 0, "Lemon", "Pear");
-console.log("Add new elements at index 2: ", items);
+console.log("splice() example 1: ", items);
 
 var items = ["Banana", "Orange", "Apple", "Mango"];
 items.splice(-1, 0, "Kiwi");
-console.log("Add new element at index -1 counting from right to left: ", items);
+console.log("splice() example 2: ", items);
 
 // splice() method: Removing elements from an array using the splice() method
 var itemsSold = ["Butter", "Chocolate", "Milk", "Bread", "Oil", "Rice"];
 itemsSold.splice(1, 2); // returns the removed items ["Chocolate", "Milk"]
-console.log("Remove 2 items starting from index 1 (left to right):", itemsSold);
+console.log("splice() example 3: ", itemsSold);
 
 var itemsSold = ["Butter", "Chocolate", "Milk", "Bread", "Oil", "Rice"];
-itemsSold.splice(-2, 1); // returns the removed item ["Oil"]
-console.log("Remove second item from right to left", itemsSold);
+itemsSold.splice(-3, 2); // returns the removed item ["Bread", "Oil"]
+console.log("splice() example 4: ", itemsSold);
 
 // concat() method: Merge two or more existing arrays together and return a new array
 var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 var names = ["Jane", "Mary", "Larry"];
 var mixedItems = cars.concat(fruits, names);
-console.log(mixedItems);
+console.log("concat() example 1: ", mixedItems);
 
 var ages1 = [23, 35, 56];
 var newAges = ages1.concat(78, 89, 16);
-console.log(newAges);
+console.log("concat() example 2: ", newAges);
+
+// slice() method: Extract a section of an array and returns a new array
+var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple"];
+var juice = fruits.slice(2);
+console.log("slice() example 1: ", juice);
+
+var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple"];
+var juice = fruits.slice(-2);
+console.log("slice() example 2: ", juice);
+
+var cars = ["BMW", "Ford", "Volvo", "Ferrari", "Benz"];
+var forSale = cars.slice(-3, 3);
+console.log("slice example 3: ", forSale);
+
+var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple"];
+var juice = fruits.slice(1, 3);
+console.log("slice example 4: ", juice);

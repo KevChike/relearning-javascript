@@ -226,3 +226,37 @@ var newAges = ages1.concat(78, 89, 16);
 
 console.log(newAges); // returns [23, 35, 56, 78, 89, 16]
 ```
+
+### slice()
+
+The `slice()` method extracts a section of an array and returns a new array
+
+**Example**
+
+```
+var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple"];
+var juice = fruits.slice(2);
+
+console.log(juice); // returns ["Pear", "Apple", "Pineapple"]
+```
+
+The **first parameter** in the `slice()` method is the index where the array
+should be sliced from. If the **first parameter** is a positive number, it starts
+counting from _left to right_ of the array. If the **first parameter** is a
+negative number, it starts counting from _right to left_.
+
+The `slice()` method can also accept a **second parameter**. The **second parameter**
+determines the number of elements that will be sliced out from the start point
+(i.e. the **first parameter**). In this case the end argument is not included
+
+**Example**
+
+```
+var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple"];
+var juice = fruits.slice(1, 3);
+
+console.log(juice); // returns ["Orange", "Pear"]
+```
+
+Remember that if the **second parameter** is not provided, the end point will be
+the last element of the array whether the **first parameter** is positive or negative.
