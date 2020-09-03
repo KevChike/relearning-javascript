@@ -43,9 +43,20 @@ console.log("Add new element at index -1 counting from right to left: ", items);
 
 // splice() method: Removing elements from an array using the splice() method
 var itemsSold = ["Butter", "Chocolate", "Milk", "Bread", "Oil", "Rice"];
-itemsSold.splice(1, 2); // returns empty array since no element was removed
+itemsSold.splice(1, 2); // returns the removed items ["Chocolate", "Milk"]
 console.log("Remove 2 items starting from index 1 (left to right):", itemsSold);
 
 var itemsSold = ["Butter", "Chocolate", "Milk", "Bread", "Oil", "Rice"];
-itemsSold.splice(-2, 1);
+itemsSold.splice(-2, 1); // returns the removed item ["Oil"]
 console.log("Remove second item from right to left", itemsSold);
+
+// concat() method: Merge two or more existing arrays together and return a new array
+var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var names = ["Jane", "Mary", "Larry"];
+var mixedItems = cars.concat(fruits, names);
+console.log(mixedItems);
+
+var ages1 = [23, 35, 56];
+var newAges = ages1.concat(78, 89, 16);
+console.log(newAges);

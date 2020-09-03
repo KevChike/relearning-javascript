@@ -197,3 +197,32 @@ the index that is stated as the **first parameter** and it removes 2 elements st
 from the index that is stated as the **first parameter**.
 If the **first parameter** is a negative number, then the count as usual starts from
 right to left of the array.
+
+### concat()
+
+The `concat()` method merges two or more arrays and returns it as a new array.
+The `concat()` method does not change the existing arrays, it only returns them
+merged as a new array. And it can take any number of array arguments.
+
+**Example**
+
+```
+var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var names = ["Jane", "Mary", "Larry"];
+var mixedItems = cars.concat(fruits, names);
+
+console.log(mixedItems);
+// Returns ["BMW", "Ford", "Volvo", "Ferrari", "Banana", "Orange", "Apple", "Mango", "Jane", "Mary", "Larry"]
+```
+
+**NOTE:** The `concat()` method can also take strings as arguments
+
+**Example**
+
+```
+var ages1 = [23, 35, 56];
+var newAges = ages1.concat(78, 89, 16);
+
+console.log(newAges); // returns [23, 35, 56, 78, 89, 16]
+```
