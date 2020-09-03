@@ -260,3 +260,42 @@ console.log(juice); // returns ["Orange", "Pear"]
 
 Remember that if the **second parameter** is not provided, the end point will be
 the last element of the array whether the **first parameter** is positive or negative.
+
+**Examples**
+
+```
+var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
+var juice = fruits.slice(1);
+console.log(juice);
+// returns ["Orange", "Pear", "Apple", "Pineapple", "Cashew"]
+
+var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
+var juice = fruits.slice(-2);
+console.log(juice);
+// returns ["Pineapple", "Cashew"]
+
+var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
+var juice = fruits.slice(1, 3);
+console.log(juice);
+// returns ["Orange", "Pear"]
+
+var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
+var juice = fruits.slice(2, -1);
+console.log(juice);
+// returnsn ["Pear", "Apple", "Pineapple"]
+
+var cars = ["BMW", "Ford", "Volvo", "Ferrari", "Benz", "Toyota", "Honda"];
+var forSale = cars.slice(-4, -1);
+console.log(forSale);
+// returns ["Ferrari", "Benz", "Toyota"]
+
+// This example is a bit tricky but not advised to be used
+var cars = ["BMW", "Ford", "Volvo", "Ferrari", "Benz", "Toyota", "Honda"];
+var forSale = cars.slice(-5, 6);
+console.log(forSale);
+// returns ["Volvo", "Ferrari", "Benz", "Toyota"]
+/* Looks like the last example starts counting the endpoint from the beginning
+and sees the first element as index 1 not 0, then it displays only the elements
+from the start point and stops at where the end point stops (i.e. counting from
+left to right and using the first element as 1 not 0) */
+```

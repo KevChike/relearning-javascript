@@ -62,18 +62,31 @@ var newAges = ages1.concat(78, 89, 16);
 console.log("concat() example 2: ", newAges);
 
 // slice() method: Extract a section of an array and returns a new array
-var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple"];
-var juice = fruits.slice(2);
+var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
+var juice = fruits.slice(1);
 console.log("slice() example 1: ", juice);
 
-var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple"];
+var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
 var juice = fruits.slice(-2);
 console.log("slice() example 2: ", juice);
 
-var cars = ["BMW", "Ford", "Volvo", "Ferrari", "Benz"];
-var forSale = cars.slice(-3, 3);
-console.log("slice example 3: ", forSale);
-
-var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple"];
+var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
 var juice = fruits.slice(1, 3);
-console.log("slice example 4: ", juice);
+console.log("slice example 3: ", juice);
+
+var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
+var juice = fruits.slice(2, -1);
+console.log("slice() example 4: ", juice);
+
+var cars = ["BMW", "Ford", "Volvo", "Ferrari", "Benz", "Toyota", "Honda"];
+var forSale = cars.slice(-4, -1);
+console.log("slice example 5: ", forSale);
+
+// This example is a bit tricky but not advised to be used
+var cars = ["BMW", "Ford", "Volvo", "Ferrari", "Benz", "Toyota", "Honda"];
+var forSale = cars.slice(-5, 6);
+console.log("slice example 6: ", forSale);
+/* Looks like the last example starts counting the endpoint from the beginning
+and sees the first element as index 1 not 0, then it displays only the elements
+from the start point and stops at where the end point stops (i.e. counting from
+left to right and using the first element as 1 not 0) */
