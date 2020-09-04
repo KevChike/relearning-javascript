@@ -299,3 +299,14 @@ and sees the first element as index 1 not 0, then it displays only the elements
 from the start point and stops at where the end point stops (i.e. counting from
 left to right and using the first element as 1 not 0) */
 ```
+
+### toString()
+
+It converts an array to a comma seperated string
+
+```
+var cars = ["BMW", "Ford", "Volvo", "Ferrari", "Benz", "Toyota", "Honda"];
+var result = cars.toString();
+console.log(result);
+// The above will return BMW, Ford, Volvo, Ferrari, Benz, Toyota, Honda
+```
