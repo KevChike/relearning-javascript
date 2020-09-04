@@ -72,7 +72,7 @@ console.log("slice() example 2: ", juice);
 
 var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
 var juice = fruits.slice(1, 3);
-console.log("slice example 3: ", juice);
+console.log("slice() example 3: ", juice);
 
 var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
 var juice = fruits.slice(2, -1);
@@ -80,12 +80,12 @@ console.log("slice() example 4: ", juice);
 
 var cars = ["BMW", "Ford", "Volvo", "Ferrari", "Benz", "Toyota", "Honda"];
 var forSale = cars.slice(-4, -1);
-console.log("slice example 5: ", forSale);
+console.log("slice() example 5: ", forSale);
 
 // This example is a bit tricky but not advised to be used
 var cars = ["BMW", "Ford", "Volvo", "Ferrari", "Benz", "Toyota", "Honda"];
 var forSale = cars.slice(-5, 6);
-console.log("slice example 6: ", forSale);
+console.log("slice() example 6: ", forSale);
 /* Looks like the last example starts counting the endpoint from the beginning
 and sees the first element as index 1 not 0, then it displays only the elements
 from the start point and stops at where the end point stops (i.e. counting from
@@ -94,4 +94,13 @@ left to right and using the first element as 1 not 0) */
 // toString() method: Converts an array to a comman seperated string
 var cars = ["BMW", "Ford", "Volvo", "Ferrari", "Benz", "Toyota", "Honda"];
 var result = cars.toString();
-console.log(result);
+console.log("toString() example 1: ", result);
+
+// sort() method: Sorts an array in ascending order
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+console.log("sort() example 1: ", fruits);
+
+var nums = [4, 8, 1, 3, 8, 2];
+nums.sort();
+console.log("sort() example 2: ", nums);

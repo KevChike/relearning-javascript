@@ -310,3 +310,25 @@ var result = cars.toString();
 console.log(result);
 // The above will return BMW, Ford, Volvo, Ferrari, Benz, Toyota, Honda
 ```
+
+**NOTE:** All JavaScript objects have a toString() method.
+
+### sort()
+
+The `sort()` method sorts an array in ascending order
+
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+console.log(fruits);
+// The above should return ["Apple", "Banana", "Mango", "Orange"]
+```
+
+**NOTE:** When sorting numbers, it becomes tricky when the array contains negative numbers.
+
+```
+var nums = [4, 8, 1, 3, -1, -9, 8, 2];
+nums.sort();
+console.log("sort() example 2: ", nums);
+// The above will return [-1, -9, 1, 2, 3, 4, 8, 8] in stead of [-9, -1, 1, 2, 3, 4, 8, 8]
+```
