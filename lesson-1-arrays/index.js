@@ -101,6 +101,16 @@ var fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.sort();
 console.log("sort() example 1: ", fruits);
 
-var nums = [4, 8, 1, 3, 8, 2];
-nums.sort();
+// Sorting numeric arrays (Ascending order)
+var nums = [4, 8, 1, 30, -1, -9, 8, 2];
+nums.sort(function(a, b) {
+	return a - b;
+});
 console.log("sort() example 2: ", nums);
+
+// Sorting numeric arrays (Ascending order)
+var nums = [4, 8, 1, 30, -1, -9, 8, 2];
+nums.sort(function(a, b) {
+	return b - a;
+});
+console.log("sort() example 3: ", nums);

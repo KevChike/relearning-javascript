@@ -324,11 +324,37 @@ console.log(fruits);
 // The above should return ["Apple", "Banana", "Mango", "Orange"]
 ```
 
+**Sorting numeric arrays**
+
 **NOTE:** When sorting numbers, it becomes tricky when the array contains negative numbers.
 
 ```
-var nums = [4, 8, 1, 3, -1, -9, 8, 2];
+// Wrong way of sorting a numeric array
+var nums = [4, 8, 1, 30, -1, -9, 8, 2];
 nums.sort();
 console.log("sort() example 2: ", nums);
-// The above will return [-1, -9, 1, 2, 3, 4, 8, 8] in stead of [-9, -1, 1, 2, 3, 4, 8, 8]
+// The above will return [-1, -9, 1, 2, 30, 4, 8, 8] in stead of [-9, -1, 1, 2, 4, 8, 8, 30]
+```
+
+**The right way to sort numeric arrays**
+By default, the `sort()` function sorts values as strings. This works well for
+strings ("Apple" comes before "Banana").
+
+However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+Because of this, the sort() method will produce incorrect result when sorting numbers.
+
+You can fix this by providing a compare function:
+
+```
+// The right way to sort numeric arrays
+var nums = [4, 8, 1, 30, -1, -9, 8, 2];
+nums.sort(function (a, b) { return a - b }); // sort in ascending order
+console.log("sort() example 2: ", nums);
+// The above will return [-9, -1, 1, 2, 4, 8, 8, 30]
+
+// sort in descending order
+var nums = [4, 8, 1, 30, -1, -9, 8, 2];
+nums.sort(function (a, b) { return b - a });
+console.log("sort() example 2: ", nums);
+// The above will return [30, 8, 8, 4, 2, 1, -1, -9]
 ```
