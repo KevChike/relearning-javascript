@@ -358,3 +358,18 @@ nums.sort(function (a, b) { return b - a });
 console.log("sort() example 2: ", nums);
 // The above will return [30, 8, 8, 4, 2, 1, -1, -9]
 ```
+
+### reverse()
+
+The `reverse()` method reverses the elements in an array.
+
+To order the elements in an array containing strings in descending order,
+first of all sort the array in ascending order and then reverse it.
+
+```
+var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+cars.sort();
+cars.reverse();
+console.log("reverse() example 1: ", cars);
+// The above will return ["Volvo", "Ford", "Ferrari", "BMW"]
+```

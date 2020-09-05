@@ -114,3 +114,9 @@ nums.sort(function(a, b) {
 	return b - a;
 });
 console.log("sort() example 3: ", nums);
+
+// reverse() method: This method reverses the elements in an array
+var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+cars.sort();
+cars.reverse();
+console.log("reverse() example 1: ", cars);
