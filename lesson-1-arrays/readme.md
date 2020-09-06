@@ -359,6 +359,13 @@ console.log("sort() example 2: ", nums);
 // The above will return [30, 8, 8, 4, 2, 1, -1, -9]
 ```
 
+**How the compare function works in sorting of array**
+The compare function compares all the values in the array, two values at a time (a, b).
+
+When comparing 40 and 100, the sort() method calls the compare function(40, 100).
+
+The function calculates 40 - 100 (a - b), and since the result is negative (-60), the sort function will sort 40 as a value lower than 100.
+
 ### reverse()
 
 The `reverse()` method reverses the elements in an array.
