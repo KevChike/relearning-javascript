@@ -409,6 +409,33 @@ console.log(maxValue);
 console.log(minValue);
 ```
 
+**Sorting an array of objests**
+JavaScript arrays can also contain objects as elements of an array. To sort an
+array with objects as it's elements, we will use the `compare function`.
+
+```
+var persons = [
+	{name: "John", age: 26},
+	{name: "Larry", age: 15},
+	{name: "Peter", age: 30},
+]
+
+// sort by age
+persons.sort(function (a, b) { return a.age - b.age });
+console.log(persons);
+
+// sort by name
+persons.sort(function (a, b) {
+	var firstParam = a.name.toLowerCase();
+	var secondParam = b.name.toLowerCase();
+
+	if (firstParam < secondParam) return -1;
+	if (firstParam > secondParam) return 1;
+	return 0;
+});
+console.log(persons);
+```
+
 ### reverse()
 
 The `reverse()` method reverses the elements in an array.

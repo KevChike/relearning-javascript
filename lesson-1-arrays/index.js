@@ -137,6 +137,31 @@ var minValue = points[0];
 console.log("max value in an array: ", maxValue);
 console.log("min value in an array: ", minValue);
 
+// Sorting an array of objects
+var persons = [
+	{ name: "John", age: 26 },
+	{ name: "Larry", age: 15 },
+	{ name: "Peter", age: 30 },
+	{ name: "Banks", age: 56 },
+];
+
+//sort by age
+persons.sort(function (a, b) {
+	return a.age - b.age;
+});
+console.log("sort() example 5: ", persons);
+
+//sort by name
+persons.sort(function (a, b) {
+	var firstParam = a.name.toLowerCase();
+	var secondParam = b.name.toLowerCase();
+
+	if (firstParam < secondParam) return -1;
+	if (firstParam > secondParam) return 1;
+	return 0;
+});
+console.log("sort() example 6: ", persons);
+
 // reverse() method: This method reverses the elements in an array
 var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
 cars.sort();
