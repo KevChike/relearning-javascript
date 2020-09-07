@@ -326,7 +326,11 @@ console.log(fruits);
 
 **Sorting numeric arrays**
 
-**NOTE:** When sorting numbers, it becomes tricky when the array contains negative numbers.
+**NOTE:** When sorting numbers, it becomes tricky most especially when you have
+negative numbers in the array. This is because JavaScript converts the numbers to
+strings before sorting. For further understanding of this, read more about **ASCII**
+precisely the **ASCII Table**. You will notice that on the **ASCII Table**, numbers
+that are in form of a string a assigned a certain **decimal value**.
 
 ```
 // Wrong way of sorting a numeric array
