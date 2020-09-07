@@ -384,3 +384,18 @@ cars.reverse();
 console.log("reverse() example 1: ", cars);
 // The above will return ["Volvo", "Ford", "Ferrari", "BMW"]
 ```
+
+**Sorting a numeric array in random order using the Fisher Yates method**
+
+```
+var points = [40, 100, 1, 5, 25, 10];
+
+for (i = points.length - 1; i > 0; i--) {
+	j = Math.floor(Math.random() * i);
+	k = points[i];
+	points[i] = points[j];
+	points[j] = k;
+}
+
+console.log(points);
+```
