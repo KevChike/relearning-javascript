@@ -127,6 +127,16 @@ for (i = points.length - 1; i > 0; i--) {
 
 console.log("sort() example 4: ", points);
 
+// Highest (max) and lowest (min) values in an array
+var points = [40, 100, 1, 5, 25, 10];
+points.sort(function (a, b) {
+	return a - b;
+}); // sorted in ascending order
+var maxValue = points[points.length - 1];
+var minValue = points[0];
+console.log("max value in an array: ", maxValue);
+console.log("min value in an array: ", minValue);
+
 // reverse() method: This method reverses the elements in an array
 var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
 cars.sort();

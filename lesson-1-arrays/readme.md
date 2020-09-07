@@ -370,13 +370,6 @@ When comparing 40 and 100, the sort() method calls the compare function(40, 100)
 
 The function calculates 40 - 100 (a - b), and since the result is negative (-60), the sort function will sort 40 as a value lower than 100.
 
-### reverse()
-
-The `reverse()` method reverses the elements in an array.
-
-To order the elements in an array containing strings in descending order,
-first of all sort the array in ascending order and then reverse it.
-
 ```
 var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
 cars.sort();
@@ -399,3 +392,26 @@ for (i = points.length - 1; i > 0; i--) {
 
 console.log(points);
 ```
+
+**Find the highest or lowest value in an array**
+JavaScript doesn't have a built-in function for finding the highest or lowest value in an array.
+However, we can still achieve this by returning the highest and lowest index in a sorted array
+in order to know the highest (max) and lowest (min) values respectively.
+
+**Example**
+
+```
+var points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b}); // sorted in ascending order
+var maxValue = points[points.length - 1];
+var minValue = points[0];
+console.log(maxValue);
+console.log(minValue);
+```
+
+### reverse()
+
+The `reverse()` method reverses the elements in an array.
+
+To order the elements in an array containing strings in descending order,
+first of all sort the array in ascending order and then reverse it.
