@@ -282,7 +282,7 @@ console.log(juice);
 var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
 var juice = fruits.slice(2, -1);
 console.log(juice);
-// returnsn ["Pear", "Apple", "Pineapple"]
+// returns ["Pear", "Apple", "Pineapple"]
 
 var cars = ["BMW", "Ford", "Volvo", "Ferrari", "Benz", "Toyota", "Honda"];
 var forSale = cars.slice(-4, -1);
