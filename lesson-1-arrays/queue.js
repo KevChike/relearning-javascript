@@ -15,6 +15,7 @@ function dequeue(array) {
 queue = enqueue(queue, 2);
 queue = enqueue(queue, 5);
 queue = enqueue(queue, 7);
+
 queue = dequeue(queue);
 
 console.log(queue);
