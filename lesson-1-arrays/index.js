@@ -190,3 +190,26 @@ var newNumbers = numbers.map(function (element) {
 	return element * 2;
 });
 console.log("map() example 1: ", newNumbers);
+
+// filter() method: It returns the array of elements that passes a test.
+var ages = [12, 21, 18, 17, 19, 25, 14];
+
+var validAge = ages.filter(function (element) {
+	return element >= 18;
+});
+
+console.log("filter() example 1: ", validAge);
+
+// filter the prime numbers
+var numbers = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+
+var primeNumbers = numbers.filter(function (element) {
+	for (let i = 2; element > i; i++) {
+		if (element % i == 0) {
+			return false;
+		}
+	}
+	return element > 1;
+});
+
+console.log("filter() example 2: ", primeNumbers);

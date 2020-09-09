@@ -477,6 +477,7 @@ If you need such behavior, the `forEach()` method is the **wrong** tool.
 The `map()` method calls a provided callback function once for each element in an array,
 and constructs a new array from the results. The callback function is not called for
 missing elements of the array. The `map()` method does not change the original array.
+
 Just like the callback function on the `forEach()` method, the `map()` method has three (3)
 parameters in the callback function; **value** of the element, the **index** of the element
 and the **array** itself.
@@ -497,3 +498,28 @@ You shouldn't be using `map()` if:
 
 - you're not using the array it returns; and/or
 - you're not returning a value from the callback.
+
+### filter()
+
+The `filter()` method creates a new array with all elements that passes a test
+implemented by the provided function (callback function). If no elements pass the
+test, an empty array will be returned. The `map()` method does not change the original array.
+
+The callback function returns `true` to keep the elements of the array that pass the
+test and `false` for those that don't pass the test. Array elements which do not
+pass the callback test are simply skipped, and are not included in the new array.
+
+The callback function in the `filter()` method accepts three (3) parameters;
+**value** of the element, the **index** of the element and the **array** itself.
+
+**Example**
+
+```
+var ages = [12, 21, 18, 17, 19, 25, 14];
+
+var validAge = ages.filter(function (element) {
+	return element >= 18;
+});
+
+console.log(validAge); // returns [21, 18, 19, 25]
+```
