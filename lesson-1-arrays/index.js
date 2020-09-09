@@ -168,7 +168,7 @@ cars.sort();
 cars.reverse();
 console.log("reverse() example 1: ", cars);
 
-// forEach method: This method calls a callback function once for each element of the array
+// forEach() method: This method calls a callback function once for each element of the array
 var numbers = [7, 9, 2, 3, 6];
 
 numbers.forEach(function (value) {
@@ -183,3 +183,10 @@ values.forEach(function (element) {
 });
 
 console.log("forEach() example 2: ", squareOfValues);
+
+// map() method: This method returns a new array by performing a function on each elements of the array
+var numbers = [2, 5, 6, 10];
+var newNumbers = numbers.map(function (element) {
+	return element * 2;
+});
+console.log("map() example 1: ", newNumbers);

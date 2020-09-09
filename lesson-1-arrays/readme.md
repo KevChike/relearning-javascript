@@ -466,8 +466,34 @@ values.forEach(function (element) {
 	squareOfValues.push(element * element);
 });
 
-console.log("forEach() example 2: ", squareOfValues); // Returns [1, 4, 9, 16, 25]
+console.log("forEach() example 2: ", squareOfValues); // returns [1, 4, 9, 16, 25]
 ```
 
 **NOTE:** There is no way to stop or break a `forEach()` loop other than by throwing an exception.
 If you need such behavior, the `forEach()` method is the **wrong** tool.
+
+### map()
+
+The `map()` method calls a provided callback function once for each element in an array,
+and constructs a new array from the results. The callback function is not called for
+missing elements of the array. The `map()` method does not change the original array.
+Just like the callback function on the `forEach()` method, the `map()` method has three (3)
+parameters in the callback function; **value** of the element, the **index** of the element
+and the **array** itself.
+
+**Example**
+
+```
+var numbers = [2, 5, 6, 10];
+var newNumbers = numbers.map(function (element) {
+	return element * 2;
+});
+console.log("map() example 1: ", newNumbers); // returns [4, 10, 12, 20]
+```
+
+**When not to use map()**
+
+You shouldn't be using `map()` if:
+
+- you're not using the array it returns; and/or
+- you're not returning a value from the callback.
