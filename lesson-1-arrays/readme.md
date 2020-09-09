@@ -442,3 +442,22 @@ The `reverse()` method reverses the elements in an array.
 
 To order the elements in an array containing strings in descending order,
 first of all sort the array in ascending order and then reverse it.
+
+### forEach()
+
+The `forEach()` method calls a function (a callback function) once for each element of the array.
+The callback function in the `forEach()` method accepts three (3) parameters;
+**value** of the element, the **index** of the element and the **array** itself.
+
+**Example**
+
+```
+var numbers = [7, 9, 2, 3, 6];
+
+var newNumbers = numbers.forEach(function (value) {
+	console.log("forEach() example 1: ", value);
+});
+```
+
+**NOTE:** There is no way to stop or break a `forEach()` loop other than by throwing an exception.
+If you need such behavior, the `forEach()` method is the **wrong** tool.

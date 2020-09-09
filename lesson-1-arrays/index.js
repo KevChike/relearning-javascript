@@ -167,3 +167,10 @@ var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
 cars.sort();
 cars.reverse();
 console.log("reverse() example 1: ", cars);
+
+// forEach method: This method calls a callback function once for each element of the array
+var numbers = [7, 9, 2, 3, 6];
+
+var newNumbers = numbers.forEach(function (value) {
+	console.log("forEach() example 1: ", value);
+});
