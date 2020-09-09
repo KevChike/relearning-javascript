@@ -454,9 +454,19 @@ The callback function in the `forEach()` method accepts three (3) parameters;
 ```
 var numbers = [7, 9, 2, 3, 6];
 
-var newNumbers = numbers.forEach(function (value) {
+numbers.forEach(function (value) {
 	console.log("forEach() example 1: ", value);
 });
+
+// Example 2:
+var values = [1, 2, 3, 4, 5];
+var squareOfValues = [];
+
+values.forEach(function (element) {
+	squareOfValues.push(element * element);
+});
+
+console.log("forEach() example 2: ", squareOfValues); // Returns [1, 4, 9, 16, 25]
 ```
 
 **NOTE:** There is no way to stop or break a `forEach()` loop other than by throwing an exception.

@@ -171,6 +171,15 @@ console.log("reverse() example 1: ", cars);
 // forEach method: This method calls a callback function once for each element of the array
 var numbers = [7, 9, 2, 3, 6];
 
-var newNumbers = numbers.forEach(function (value) {
+numbers.forEach(function (value) {
 	console.log("forEach() example 1: ", value);
 });
+
+var values = [1, 2, 3, 4, 5];
+var squareOfValues = [];
+
+values.forEach(function (element) {
+	squareOfValues.push(element * element);
+});
+
+console.log("forEach() example 2: ", squareOfValues);
