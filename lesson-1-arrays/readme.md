@@ -503,7 +503,7 @@ You shouldn't be using `map()` if:
 
 The `filter()` method creates a new array with all elements that passes a test
 implemented by the provided function (callback function). If no elements pass the
-test, an empty array will be returned. The `map()` method does not change the original array.
+test, an empty array will be returned. The `filter()` method does not change the original array.
 
 The callback function returns `true` to keep the elements of the array that pass the
 test and `false` for those that don't pass the test. Array elements which do not
