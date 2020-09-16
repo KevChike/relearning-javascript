@@ -523,3 +523,15 @@ var validAge = ages.filter(function (element) {
 
 console.log(validAge); // returns [21, 18, 19, 25]
 ```
+
+### reduce()
+
+The `reduce()` method runs a function on each array element to produce a single value.
+The `reduce()` method works from left-to-right in the array and does not reduce the original array.
+
+**Note** that the callback function in the `reduce()` method takes 4 arguments:
+
+- The Accumulator (the initial value / previously returned value)
+- The item value
+- The item index
+- The array itself

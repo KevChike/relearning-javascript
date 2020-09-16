@@ -213,3 +213,19 @@ var primeNumbers = numbers.filter(function (element) {
 });
 
 console.log("filter() example 2: ", primeNumbers);
+
+// reduce() method: runs a function on each array element to produce a single value.
+var numbers = [2, 4, 6, 8];
+var reduced = numbers.reduce(function (accumulator, value) {
+	return accumulator + value;
+});
+
+console.log("reduce() example 1: ", reduced);
+
+var words = ["Hello", "and", "how", "are", "you"];
+var reduced = words.reduce(function (accumulator, value) {
+	console.log(accumulator);
+	return accumulator + " " + value;
+});
+
+console.log("reduce() example 2: ", reduced);
