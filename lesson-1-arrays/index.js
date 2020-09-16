@@ -216,16 +216,19 @@ console.log("filter() example 2: ", primeNumbers);
 
 // reduce() method: runs a function on each array element to produce a single value.
 var numbers = [2, 4, 6, 8];
-var reduced = numbers.reduce(function (accumulator, value) {
+var sum = numbers.reduce(function (accumulator, value) {
 	return accumulator + value;
 });
-
-console.log("reduce() example 1: ", reduced);
+console.log("reduce() example 1: ", sum);
 
 var words = ["Hello", "and", "how", "are", "you"];
 var reduced = words.reduce(function (accumulator, value) {
-	console.log(accumulator);
 	return accumulator + " " + value;
 });
-
 console.log("reduce() example 2: ", reduced);
+
+var numbers = [4, 2, 7, 1, 3];
+var maximum = numbers.reduce(function (accumulator, value) {
+	return Math.max(accumulator, value);
+});
+console.log("reduce() example 3: ", maximum);

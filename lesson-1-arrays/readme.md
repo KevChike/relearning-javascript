@@ -535,3 +535,19 @@ The `reduce()` method works from left-to-right in the array and does not reduce 
 - The item value
 - The item index
 - The array itself
+
+**Example**
+
+```
+var numbers = [2, 4, 6, 8];
+var sum = numbers.reduce(function (accumulator, value) {
+	return accumulator + value;
+});
+console.log(sum);
+
+var numbers = [4, 2, 7, 1, 3];
+var maximum = numbers.reduce(function (accumulator, value) {
+	return Math.max(accumulator, value);
+});
+console.log(maximum);
+```
