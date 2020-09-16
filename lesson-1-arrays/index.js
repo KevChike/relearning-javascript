@@ -228,7 +228,7 @@ var reduced = words.reduce(function (accumulator, currentValue) {
 });
 console.log("reduce() example 2: ", reduced);
 
-// Get the maximu number
+// Get the maximum number
 var numbers = [4, 2, 7, 1, 3];
 var maximum = numbers.reduce(function (accumulator, currentValue) {
 	return Math.max(accumulator, currentValue);
