@@ -550,4 +550,14 @@ var maximum = numbers.reduce(function (accumulator, value) {
 	return Math.max(accumulator, value);
 });
 console.log(maximum);
+
+var arrays = [
+	[0, 1],
+	[2, 3],
+	[4, 5],
+];
+var flattened = arrays.reduce(function (accumulator, currentValue) {
+	return accumulator.concat(currentValue);
+});
+console.log("reduce() example 4: ", flattened);
 ```
