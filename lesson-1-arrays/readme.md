@@ -414,18 +414,18 @@ JavaScript arrays can also contain objects as elements of an array. To sort an
 array with objects as it's elements, we will use the `compare function`.
 
 ```
-let persons3 = [
+let persons = [
 	{name: "John", age: 26},
 	{name: "Larry", age: 15},
 	{name: "Peter", age: 30},
 ]
 
 // sort by age
-persons3.sort((a, b) => a.age - b.age);
-console.log(persons3);
+persons.sort((a, b) => a.age - b.age);
+console.log(persons);
 
 // sort by name
-persons3.sort((a, b) => {
+persons.sort((a, b) => {
 	let firstParam = a.name.toLowerCase();
 	let secondParam = b.name.toLowerCase();
 
@@ -433,7 +433,7 @@ persons3.sort((a, b) => {
 	if (firstParam > secondParam) return 1;
 	return 0;
 });
-console.log(persons3);
+console.log(persons);
 ```
 
 ### reverse()
@@ -452,15 +452,15 @@ The callback function in the `forEach()` method accepts three (3) parameters;
 **Example**
 
 ```
-let numbers1 = [7, 9, 2, 3, 6];
+let numbers = [7, 9, 2, 3, 6];
 
-numbers1.forEach((value) => console.log(value));
+numbers.forEach((value) => console.log(value));
 
 // Example 2:
-let values1 = [1, 2, 3, 4, 5];
+let values = [1, 2, 3, 4, 5];
 let squareOfValues = [];
 
-values1.forEach((element) => squareOfValues.push(element * element));
+values.forEach((element) => squareOfValues.push(element * element));
 
 console.log(squareOfValues); // returns [1, 4, 9, 16, 25]
 ```
@@ -481,8 +481,8 @@ and the **array** itself.
 **Example**
 
 ```
-let numbers2 = [2, 5, 6, 10];
-let newNumbers = numbers2.map((element) => element * 2);
+let numbers = [2, 5, 6, 10];
+let newNumbers = numbers.map((element) => element * 2);
 console.log(newNumbers); // returns [4, 10, 12, 20]
 ```
 
@@ -509,9 +509,9 @@ The callback function in the `filter()` method accepts three (3) parameters;
 **Example**
 
 ```
-let ages2 = [12, 21, 18, 17, 19, 25, 14];
+let ages = [12, 21, 18, 17, 19, 25, 14];
 
-let validAge = ages2.filter((element) => element >= 18);
+let validAge = ages.filter((element) => element >= 18);
 
 console.log(validAge); // returns [21, 18, 19, 25]
 ```
@@ -534,14 +534,14 @@ The `reduce()` method works from left-to-right in the array and does not reduce 
 **Example**
 
 ```
-let numbers4 = [2, 4, 6, 8];
-let sum = numbers4.reduce((accumulator, currentValue) => {
+let numbers1 = [2, 4, 6, 8];
+let sum = numbers1.reduce((accumulator, currentValue) => {
 	return accumulator + currentValue;
 });
 console.log(sum);
 
-let numbers5 = [4, 2, 7, 1, 3];
-let maximum = numbers5.reduce((accumulator, currentValue) => {
+let numbers2 = [4, 2, 7, 1, 3];
+let maximum = numbers2.reduce((accumulator, currentValue) => {
 	return Math.max(accumulator, currentValue);
 });
 console.log(maximum);
