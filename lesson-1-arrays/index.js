@@ -103,16 +103,12 @@ console.log("sort() example 1: ", fruits7);
 
 // Sorting numeric arrays (Ascending order)
 let nums1 = [4, 8, 1, 30, -1, -9, 8, 2];
-nums1.sort(function (a, b) {
-	return a - b;
-});
+nums1.sort((a, b) => a - b);
 console.log("sort() example 2: ", nums1);
 
 // Sorting numeric arrays (Descending order)
 let nums2 = [4, 8, 1, 30, -1, -9, 8, 2];
-nums2.sort(function (a, b) {
-	return b - a;
-});
+nums2.sort((a, b) => b - a);
 console.log("sort() example 3: ", nums2);
 
 // Sorting a numeric array in random order using the  Fisher Yates method
@@ -129,9 +125,7 @@ console.log("sort() example 4: ", points1);
 
 // Highest (max) and lowest (min) values in an array
 let points2 = [40, 100, 1, 5, 25, 10];
-points2.sort(function (a, b) {
-	return a - b;
-}); // sorted in ascending order
+points2.sort((a, b) => a - b); // sorted in ascending order
 let maxValue = points2[points2.length - 1];
 let minValue = points2[0];
 console.log("max value in an array: ", maxValue);
@@ -146,13 +140,11 @@ let persons3 = [
 ];
 
 //sort by age
-persons3.sort(function (a, b) {
-	return a.age - b.age;
-});
+persons3.sort((a, b) => a.age - b.age);
 console.log("sort() example 5: ", persons3);
 
 //sort by name
-persons3.sort(function (a, b) {
+persons3.sort((a, b) => {
 	let firstParam = a.name.toLowerCase();
 	let secondParam = b.name.toLowerCase();
 
@@ -171,39 +163,31 @@ console.log("reverse() example 1: ", cars8);
 // forEach() method: This method calls a callback function once for each element of the array
 let numbers1 = [7, 9, 2, 3, 6];
 
-numbers1.forEach(function (value) {
-	console.log("forEach() example 1: ", value);
-});
+numbers1.forEach((value) => console.log("forEach() example 1: ", value));
 
 let values1 = [1, 2, 3, 4, 5];
 let squareOfValues = [];
 
-values1.forEach(function (element) {
-	squareOfValues.push(element * element);
-});
+values1.forEach((element) => squareOfValues.push(element * element));
 
 console.log("forEach() example 2: ", squareOfValues);
 
 // map() method: This method returns a new array by performing a function on each elements of the array
 let numbers2 = [2, 5, 6, 10];
-let newNumbers = numbers2.map(function (element) {
-	return element * 2;
-});
+let newNumbers = numbers2.map((element) => element * 2);
 console.log("map() example 1: ", newNumbers);
 
 // filter() method: It returns the array of elements that passes a test.
 let ages2 = [12, 21, 18, 17, 19, 25, 14];
 
-let validAge = ages2.filter(function (element) {
-	return element >= 18;
-});
+let validAge = ages2.filter((element) => element >= 18);
 
 console.log("filter() example 1: ", validAge);
 
 // filter the prime numbers
 let numbers3 = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
-let primeNumbers = numbers3.filter(function (element) {
+let primeNumbers = numbers3.filter((element) => {
 	for (let i = 2; element > i; i++) {
 		if (element % i == 0) {
 			return false;
@@ -216,21 +200,21 @@ console.log("filter() example 2: ", primeNumbers);
 
 // reduce() method: runs a function on each array element to produce a single value.
 let numbers4 = [2, 4, 6, 8];
-let sum = numbers4.reduce(function (accumulator, currentValue) {
+let sum = numbers4.reduce((accumulator, currentValue) => {
 	return accumulator + currentValue;
 });
 console.log("reduce() example 1: ", sum);
 
 // Joining words using the reduce() method
 let words = ["Hello", "and", "how", "are", "you"];
-let reduced = words.reduce(function (accumulator, currentValue) {
+let reduced = words.reduce((accumulator, currentValue) => {
 	return accumulator + " " + currentValue;
 });
 console.log("reduce() example 2: ", reduced);
 
 // Get the maximum number
 let numbers5 = [4, 2, 7, 1, 3];
-let maximum = numbers5.reduce(function (accumulator, currentValue) {
+let maximum = numbers5.reduce((accumulator, currentValue) => {
 	return Math.max(accumulator, currentValue);
 });
 console.log("reduce() example 3: ", maximum);
@@ -241,7 +225,7 @@ let arrays1 = [
 	[2, 3],
 	[4, 5],
 ];
-let flattened = arrays1.reduce(function (accumulator, currentValue) {
+let flattened = arrays1.reduce((accumulator, currentValue) => {
 	return accumulator.concat(currentValue);
 });
 console.log("reduce() example 4: ", flattened);
