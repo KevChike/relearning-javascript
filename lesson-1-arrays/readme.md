@@ -527,8 +527,11 @@ console.log(validAge); // returns [21, 18, 19, 25]
 ### reduce()
 
 The `reduce()` method runs a function on each array element to produce a single value.
-The `reduce()` method works from left-to-right in the array and does not reduce the original array.
+The function is applied to all array elements one after another and “carries on”
+its result to the next call. As function is applied, the result of the previous
+function call is passed to the next one as the first argument.
 
+The `reduce()` method works from left-to-right in the array and does not reduce the original array.
 **Note** that the callback function in the `reduce()` method takes 4 arguments:
 
 - The Accumulator (the initial value / previously returned value)
