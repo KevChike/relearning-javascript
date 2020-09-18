@@ -7,14 +7,14 @@ a single variable. An example can be a list of car names. An array in JavaScript
 can be represented as shown below;
 
 ```
-var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+let cars = ["BMW", "Ford", "Volvo", "Ferrari"];
 ```
 
 You can also use the `new` keyword in JavaScript to create an array but it is
 NOT advisable, instead stick to the first method above.
 
 ```
-var cars = new Array("BMW", "Ford", "Volvo", "Ferrari");
+let cars = new Array("BMW", "Ford", "Volvo", "Ferrari");
 ```
 
 **NOTE**
@@ -31,8 +31,8 @@ In JavaScript, the index number of the first element in an array is 0. If we are
 to access the second element in a JavaScript array, we will do that as shown below;
 
 ```
-var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
-var name = cars[1];
+let cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+let name = cars[1];
 console.log(name);
 
 // Output
@@ -44,11 +44,11 @@ Ford
 You can change or replace an element in a JavaScript array, as shown below;
 
 ```
-var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+let cars = ["BMW", "Ford", "Volvo", "Ferrari"];
 cars[1] = "Jeep";
 
 // If we now try to access the second element in the array
-var name = cars[1];
+let name = cars[1];
 console.log(name);
 
 // Output
@@ -68,7 +68,7 @@ JavaScript as an array not object.
 The `length` property in JavaScript return the total number of elements in an array.
 
 ```
-var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+let cars = ["BMW", "Ford", "Volvo", "Ferrari"];
 console.log(cars.length)
 
 // Output
@@ -81,8 +81,8 @@ Example, from the above the highest index is `3` but the length property will re
 #### How to access the last element of an array using the length property
 
 ```
-var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
-var last = cars[cars.length - 1];
+let cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+let last = cars[cars.length - 1];
 console.log(last)
 
 // Output
@@ -98,7 +98,7 @@ new length of the array.
 **Example**
 
 ```
-var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+let cars = ["BMW", "Ford", "Volvo", "Ferrari"];
 cars.push('Benz'); // returns 5
 
 // if we display the entire elements in the array, we should see 'Benz' at the end of the array
@@ -113,7 +113,7 @@ last element that was removed
 **Example**
 
 ```
-var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+let cars = ["BMW", "Ford", "Volvo", "Ferrari"];
 cars.pop(); // return "Ferrari"
 
 // if we display the entire elements in the array, we will be unable to  should see "Ferrari"
@@ -134,7 +134,7 @@ the end of an array.
 **Example**
 
 ```
-var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+let cars = ["BMW", "Ford", "Volvo", "Ferrari"];
 cars.unshift('Benz'); // returns 5
 
 // if we display the entire elements in the array, we should see 'Benz' at the end of the array
@@ -151,7 +151,7 @@ method that works at the ending of an array.
 **Example**
 
 ```
-var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+let cars = ["BMW", "Ford", "Volvo", "Ferrari"];
 cars.shift(); // return "Ferrari"
 
 // if we display the entire elements in the array, we will be unable to  should see "Ferrari"
@@ -169,7 +169,7 @@ It will return an empty array `[]` if no element was removed.
 _Example_
 
 ```
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.splice(2, 0, "Lemon", "Pear"); // returns empty array since no element was removed
 ```
 
@@ -185,7 +185,7 @@ From the above example, `('Lemon', 'Pear')` will be added before `'Apple'`
 _Example_
 
 ```
-var fruits = ["Banana", "Orange", "Apple", "Mango", "Pear", "Pineapple"];
+let fruits = ["Banana", "Orange", "Apple", "Mango", "Pear", "Pineapple"];
 fruits.splice(1, 2); // returns the removed elements ['orange', 'apple']
 ```
 
@@ -207,10 +207,10 @@ merged as a new array. And it can take any number of array arguments.
 **Example**
 
 ```
-var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-var names = ["Jane", "Mary", "Larry"];
-var mixedItems = cars.concat(fruits, names);
+let cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+let fruits = ["Banana", "Orange", "Apple", "Mango"];
+let names = ["Jane", "Mary", "Larry"];
+let mixedItems = cars.concat(fruits, names);
 
 console.log(mixedItems);
 // Returns ["BMW", "Ford", "Volvo", "Ferrari", "Banana", "Orange", "Apple", "Mango", "Jane", "Mary", "Larry"]
@@ -221,8 +221,8 @@ console.log(mixedItems);
 **Example**
 
 ```
-var ages1 = [23, 35, 56];
-var newAges = ages1.concat(78, 89, 16);
+let ages1 = [23, 35, 56];
+let newAges = ages1.concat(78, 89, 16);
 
 console.log(newAges); // returns [23, 35, 56, 78, 89, 16]
 ```
@@ -234,8 +234,8 @@ The `slice()` method extracts a section of an array and returns a new array
 **Example**
 
 ```
-var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple"];
-var juice = fruits.slice(2);
+let fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple"];
+let juice = fruits.slice(2);
 
 console.log(juice); // returns ["Pear", "Apple", "Pineapple"]
 ```
@@ -252,8 +252,8 @@ determines the number of elements that will be sliced out from the start point
 **Example**
 
 ```
-var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple"];
-var juice = fruits.slice(1, 3);
+let fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple"];
+let juice = fruits.slice(1, 3);
 
 console.log(juice); // returns ["Orange", "Pear"]
 ```
@@ -264,35 +264,35 @@ the last element of the array whether the **first parameter** is positive or neg
 **Examples**
 
 ```
-var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
-var juice = fruits.slice(1);
-console.log(juice);
+let fruits1 = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
+let juice1 = fruits1.slice(1);
+console.log(juice1);
 // returns ["Orange", "Pear", "Apple", "Pineapple", "Cashew"]
 
-var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
-var juice = fruits.slice(-2);
-console.log(juice);
+let fruits2 = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
+let juice2 = fruits2.slice(-2);
+console.log(juice2);
 // returns ["Pineapple", "Cashew"]
 
-var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
-var juice = fruits.slice(1, 3);
-console.log(juice);
+let fruits3 = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
+let juice3 = fruits3.slice(1, 3);
+console.log(juice3);
 // returns ["Orange", "Pear"]
 
-var fruits = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
-var juice = fruits.slice(2, -1);
-console.log(juice);
+let fruits4 = ["Mango", "Orange", "Pear", "Apple", "Pineapple", "Cashew"];
+let juice4 = fruits4.slice(2, -1);
+console.log(juice4);
 // returns ["Pear", "Apple", "Pineapple"]
 
-var cars = ["BMW", "Ford", "Volvo", "Ferrari", "Benz", "Toyota", "Honda"];
-var forSale = cars.slice(-4, -1);
-console.log(forSale);
+let cars1 = ["BMW", "Ford", "Volvo", "Ferrari", "Benz", "Toyota", "Honda"];
+let forSale1 = cars1.slice(-4, -1);
+console.log(forSale1);
 // returns ["Ferrari", "Benz", "Toyota"]
 
 // This example is a bit tricky but not advised to be used
-var cars = ["BMW", "Ford", "Volvo", "Ferrari", "Benz", "Toyota", "Honda"];
-var forSale = cars.slice(-5, 6);
-console.log(forSale);
+let cars2 = ["BMW", "Ford", "Volvo", "Ferrari", "Benz", "Toyota", "Honda"];
+let forSale2 = cars2.slice(-5, 6);
+console.log(forSale2);
 // returns ["Volvo", "Ferrari", "Benz", "Toyota"]
 /* Looks like the last example starts counting the endpoint from the beginning
 and sees the first element as index 1 not 0, then it displays only the elements
@@ -305,8 +305,8 @@ left to right and using the first element as 1 not 0) */
 It converts an array to a comma seperated string
 
 ```
-var cars = ["BMW", "Ford", "Volvo", "Ferrari", "Benz", "Toyota", "Honda"];
-var result = cars.toString();
+let cars = ["BMW", "Ford", "Volvo", "Ferrari", "Benz", "Toyota", "Honda"];
+let result = cars.toString();
 console.log(result);
 // The above will return BMW, Ford, Volvo, Ferrari, Benz, Toyota, Honda
 ```
@@ -318,7 +318,7 @@ console.log(result);
 The `sort()` method sorts an array in ascending order
 
 ```
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.sort();
 console.log(fruits);
 // The above should return ["Apple", "Banana", "Mango", "Orange"]
@@ -334,7 +334,7 @@ that are in form of a string a assigned a certain **decimal value**.
 
 ```
 // Wrong way of sorting a numeric array
-var nums = [4, 8, 1, 30, -1, -9, 8, 2];
+let nums = [4, 8, 1, 30, -1, -9, 8, 2];
 nums.sort();
 console.log("sort() example 2: ", nums);
 // The above will return [-1, -9, 1, 2, 30, 4, 8, 8] in stead of [-9, -1, 1, 2, 4, 8, 8, 30]
@@ -351,15 +351,15 @@ You can fix this by providing a compare function:
 
 ```
 // The right way to sort numeric arrays
-var nums = [4, 8, 1, 30, -1, -9, 8, 2];
-nums.sort(function (a, b) { return a - b }); // sort in ascending order
-console.log("sort() example 2: ", nums);
+let nums1 = [4, 8, 1, 30, -1, -9, 8, 2];
+nums1.sort((a, b) => a - b); // sort in ascending order
+console.log(nums1);
 // The above will return [-9, -1, 1, 2, 4, 8, 8, 30]
 
 // sort in descending order
-var nums = [4, 8, 1, 30, -1, -9, 8, 2];
-nums.sort(function (a, b) { return b - a });
-console.log("sort() example 2: ", nums);
+let nums2 = [4, 8, 1, 30, -1, -9, 8, 2];
+nums2.sort((a, b) => b - a);
+console.log(nums2);
 // The above will return [30, 8, 8, 4, 2, 1, -1, -9]
 ```
 
@@ -371,7 +371,7 @@ When comparing 40 and 100, the sort() method calls the compare function(40, 100)
 The function calculates 40 - 100 (a - b), and since the result is negative (-60), the sort function will sort 40 as a value lower than 100.
 
 ```
-var cars = ["BMW", "Ford", "Volvo", "Ferrari"];
+let cars = ["BMW", "Ford", "Volvo", "Ferrari"];
 cars.sort();
 cars.reverse();
 console.log("reverse() example 1: ", cars);
@@ -381,7 +381,7 @@ console.log("reverse() example 1: ", cars);
 **Sorting a numeric array in random order using the Fisher Yates method**
 
 ```
-var points = [40, 100, 1, 5, 25, 10];
+let points = [40, 100, 1, 5, 25, 10];
 
 for (i = points.length - 1; i > 0; i--) {
 	j = Math.floor(Math.random() * i);
@@ -401,10 +401,10 @@ in order to know the highest (max) and lowest (min) values respectively.
 **Example**
 
 ```
-var points = [40, 100, 1, 5, 25, 10];
-points.sort(function(a, b){return a - b}); // sorted in ascending order
-var maxValue = points[points.length - 1];
-var minValue = points[0];
+let points2 = [40, 100, 1, 5, 25, 10];
+points2.sort((a, b) => a - b); // sorted in ascending order
+let maxValue = points2[points2.length - 1];
+let minValue = points2[0];
 console.log(maxValue);
 console.log(minValue);
 ```
@@ -414,26 +414,26 @@ JavaScript arrays can also contain objects as elements of an array. To sort an
 array with objects as it's elements, we will use the `compare function`.
 
 ```
-var persons = [
+let persons3 = [
 	{name: "John", age: 26},
 	{name: "Larry", age: 15},
 	{name: "Peter", age: 30},
 ]
 
 // sort by age
-persons.sort(function (a, b) { return a.age - b.age });
-console.log(persons);
+persons3.sort((a, b) => a.age - b.age);
+console.log(persons3);
 
 // sort by name
-persons.sort(function (a, b) {
-	var firstParam = a.name.toLowerCase();
-	var secondParam = b.name.toLowerCase();
+persons3.sort((a, b) => {
+	let firstParam = a.name.toLowerCase();
+	let secondParam = b.name.toLowerCase();
 
 	if (firstParam < secondParam) return -1;
 	if (firstParam > secondParam) return 1;
 	return 0;
 });
-console.log(persons);
+console.log(persons3);
 ```
 
 ### reverse()
@@ -452,19 +452,15 @@ The callback function in the `forEach()` method accepts three (3) parameters;
 **Example**
 
 ```
-var numbers = [7, 9, 2, 3, 6];
+let numbers1 = [7, 9, 2, 3, 6];
 
-numbers.forEach(function (value) {
-	console.log(value);
-});
+numbers1.forEach((value) => console.log(value));
 
 // Example 2:
-var values = [1, 2, 3, 4, 5];
-var squareOfValues = [];
+let values1 = [1, 2, 3, 4, 5];
+let squareOfValues = [];
 
-values.forEach(function (element) {
-	squareOfValues.push(element * element);
-});
+values1.forEach((element) => squareOfValues.push(element * element));
 
 console.log(squareOfValues); // returns [1, 4, 9, 16, 25]
 ```
@@ -485,10 +481,8 @@ and the **array** itself.
 **Example**
 
 ```
-var numbers = [2, 5, 6, 10];
-var newNumbers = numbers.map(function (element) {
-	return element * 2;
-});
+let numbers2 = [2, 5, 6, 10];
+let newNumbers = numbers2.map((element) => element * 2);
 console.log(newNumbers); // returns [4, 10, 12, 20]
 ```
 
@@ -515,11 +509,9 @@ The callback function in the `filter()` method accepts three (3) parameters;
 **Example**
 
 ```
-var ages = [12, 21, 18, 17, 19, 25, 14];
+let ages2 = [12, 21, 18, 17, 19, 25, 14];
 
-var validAge = ages.filter(function (element) {
-	return element >= 18;
-});
+let validAge = ages2.filter((element) => element >= 18);
 
 console.log(validAge); // returns [21, 18, 19, 25]
 ```
@@ -542,25 +534,25 @@ The `reduce()` method works from left-to-right in the array and does not reduce 
 **Example**
 
 ```
-var numbers = [2, 4, 6, 8];
-var sum = numbers.reduce(function (accumulator, value) {
-	return accumulator + value;
+let numbers4 = [2, 4, 6, 8];
+let sum = numbers4.reduce((accumulator, currentValue) => {
+	return accumulator + currentValue;
 });
 console.log(sum);
 
-var numbers = [4, 2, 7, 1, 3];
-var maximum = numbers.reduce(function (accumulator, value) {
-	return Math.max(accumulator, value);
+let numbers5 = [4, 2, 7, 1, 3];
+let maximum = numbers5.reduce((accumulator, currentValue) => {
+	return Math.max(accumulator, currentValue);
 });
 console.log(maximum);
 
-var arrays = [
+let arrays1 = [
 	[0, 1],
 	[2, 3],
 	[4, 5],
 ];
-var flattened = arrays.reduce(function (accumulator, currentValue) {
+let flattened = arrays1.reduce((accumulator, currentValue) => {
 	return accumulator.concat(currentValue);
 });
-console.log("reduce() example 4: ", flattened);
+console.log(flattened);
 ```
