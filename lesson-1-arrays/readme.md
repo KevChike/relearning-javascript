@@ -585,3 +585,6 @@ let speedRecords = [90, 60, 100, 80];
 let isBelowMaxSpeed = speedRecords.every((value) => value < maxSpeed);
 console.log(isBelowMaxSpeed); // returns true
 ```
+
+The callback function in the `every()` method accepts three (3) parameters;
+**value** of the element, the **index** of the element and the **array** itself.
