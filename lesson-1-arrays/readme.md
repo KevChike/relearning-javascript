@@ -571,3 +571,17 @@ let sum = numbers1.reduce((accumulator, currentValue) => {
 });
 console.log(sum);
 ```
+
+### every()
+
+The `every()` method tests whether all elements in the array pass the test
+implemented by the provided function. It returns a Boolean value.
+
+**Example**
+
+```
+let maxSpeed = 120;
+let speedRecords = [90, 60, 100, 80];
+let isBelowMaxSpeed = speedRecords.every((value) => value < maxSpeed);
+console.log(isBelowMaxSpeed); // returns true
+```

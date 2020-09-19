@@ -229,3 +229,9 @@ let flattened = arrays1.reduce((accumulator, currentValue) => {
 	return accumulator.concat(currentValue);
 });
 console.log("reduce() example 4: ", flattened);
+
+// every() method: tests whether all elements in the array pass a test
+let maxSpeed = 120;
+let speedRecords = [90, 60, 100, 80];
+let isBelowMaxSpeed = speedRecords.every((value) => value < maxSpeed);
+console.log("every() example 1: ", isBelowMaxSpeed);
