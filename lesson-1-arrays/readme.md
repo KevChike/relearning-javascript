@@ -556,3 +556,18 @@ let flattened = arrays1.reduce((accumulator, currentValue) => {
 });
 console.log(flattened);
 ```
+
+### reduceRight()
+
+The `reduceRight()` method works same as the `reduce()` but works from
+right-to-left in the array.
+
+**Example**
+
+```
+let numbers1 = [2, 4, 6, 8];
+let sum = numbers1.reduce((accumulator, currentValue) => {
+	return accumulator + currentValue;
+});
+console.log(sum);
+```
