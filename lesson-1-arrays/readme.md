@@ -594,6 +594,13 @@ The callback function in the `every()` method accepts three (3) parameters;
 The `some()` method tests whether at least one element in the array passes the
 test implemented by the provided function. It returns a Boolean value.
 
+The `some()` method accepts a callback function which in turn accepts 3 (three)
+paramters;
+
+- The item value
+- The item index
+- The array itself
+
 **Example**
 
 ```
@@ -601,3 +608,10 @@ let numbers = [1, 2, 3, 4, 5];
 let hasEvenNumber = numbers.some((value) => value % 2 === 0);
 console.log(hasEvenNumber); // return true because an even number is in the array
 ```
+
+The `some()` method executes the callback function once for each element present
+in the array until it finds the one where callback returns a truthy value
+(a value that becomes true when converted to a Boolean). If such an element
+is found, `some()` immediately returns true. Otherwise, `some()` returns false.
+
+The `some()` method does not mutate (i.e. change) the array on which it is called.
