@@ -235,3 +235,8 @@ let maxSpeed = 120;
 let speedRecords = [90, 60, 100, 80];
 let isBelowMaxSpeed = speedRecords.every((value) => value < maxSpeed);
 console.log("every() example 1: ", isBelowMaxSpeed);
+
+// some() method: check if some array values pass a test.
+let numbers6 = [1, 2, 3, 4, 5];
+let hasEvenNumber = numbers6.some((value) => value % 2 === 0);
+console.log("some() example 1: ", hasEvenNumber);

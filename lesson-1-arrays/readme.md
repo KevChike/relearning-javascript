@@ -588,3 +588,16 @@ console.log(isBelowMaxSpeed); // returns true
 
 The callback function in the `every()` method accepts three (3) parameters;
 **value** of the element, the **index** of the element and the **array** itself.
+
+### some()
+
+The `some()` method tests whether at least one element in the array passes the
+test implemented by the provided function. It returns a Boolean value.
+
+**Example**
+
+```
+let numbers = [1, 2, 3, 4, 5];
+let hasEvenNumber = numbers.some((value) => value % 2 === 0);
+console.log(hasEvenNumber); // return true because an even number is in the array
+```
