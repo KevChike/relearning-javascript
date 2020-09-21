@@ -615,3 +615,14 @@ in the array until it finds the one where callback returns a truthy value
 is found, `some()` immediately returns true. Otherwise, `some()` returns false.
 
 The `some()` method does not mutate (i.e. change) the array on which it is called.
+
+### indexOf()
+
+The `indexOf()` method returns the first index at which a given element can be
+found in the array, or -1 if it is not present.
+
+The `indexOf()` method accepts two parameter, with second parameter being optional.
+
+- Forst parameter: Element to locate in the array.
+- Second parameter: The index to start the search at. Negative values will start
+  at the given position counting from the end, and search to the end.
