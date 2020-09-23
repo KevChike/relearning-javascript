@@ -621,8 +621,20 @@ The `some()` method does not mutate (i.e. change) the array on which it is calle
 The `indexOf()` method returns the first index at which a given element can be
 found in the array, or -1 if it is not present.
 
-The `indexOf()` method accepts two parameter, with second parameter being optional.
+The `indexOf()` method accepts two parameter, with the second parameter being optional.
 
-- Forst parameter: Element to locate in the array.
+- First parameter: Element to locate in the array.
+- Second parameter: The index to start the search at. Negative values will start
+  at the given position counting from the end, and search to the end.
+
+  ### lastIndexOf()
+
+  `lastIndexOf()` method is the same as `indexOf()` method, but returns the
+  position of the last occurrence of the specified element.
+
+  The `lastIndexOf()` method also accepts two parameter, with the second
+  parameter being optional.
+
+- First parameter: Element to locate in the array.
 - Second parameter: The index to start the search at. Negative values will start
   at the given position counting from the end, and search to the end.

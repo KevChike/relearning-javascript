@@ -241,7 +241,7 @@ let numbers6 = [1, 2, 3, 4, 5];
 let hasEvenNumber = numbers6.some((value) => value % 2 === 0);
 console.log("some() example 1: ", hasEvenNumber);
 
-// indexOf()
+// indexOf() method
 let fruits8 = ["Apple", "Orange", "Apple", "Mango"];
 let selectedFruit = fruits8.indexOf("Orange");
 console.log("indexOf() example 1: ", selectedFruit);
@@ -249,3 +249,8 @@ console.log("indexOf() example 1: ", selectedFruit);
 let beasts = ["ant", "bison", "camel", "duck", "bison"];
 // start searching from index 2
 console.log("indexOf() example 1: ", beasts.indexOf("bison", 2));
+
+// lastIndexOf() method
+var fruits9 = ["Apple", "Orange", "Apple", "Mango"];
+var lastAppearance = fruits9.lastIndexOf("Apple");
+console.log("lastIndexOf() example 1: ", lastAppearance);
