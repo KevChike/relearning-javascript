@@ -258,3 +258,5 @@ console.log("lastIndexOf() example 1: ", lastAppearance);
 // includes() method
 let arr1 = [1, 0, 7, 3, 9, 2];
 console.log("includes() example 1: ", arr1.includes(3));
+
+console.log("includes() example 2: ", arr1.includes(5));

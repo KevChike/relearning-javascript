@@ -643,6 +643,9 @@ parameter being optional.
 
 The `includes()` method looks for an item starting from index provided and returns true if found.
 
+The `includes()` method determines whether an array includes a certain value
+among its entries, returning true or false as appropriate.
+
 `arr.includes(item, from)`
 
 The `includes()` method also accepts two parameter, with the second
