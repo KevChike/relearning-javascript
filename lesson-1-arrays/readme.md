@@ -627,13 +627,26 @@ The `indexOf()` method accepts two parameter, with the second parameter being op
 - Second parameter: The index to start the search at. Negative values will start
   at the given position counting from the end, and search to the end.
 
-  ### lastIndexOf()
+### lastIndexOf()
 
-  `lastIndexOf()` method is the same as `indexOf()` method, but returns the
-  position of the last occurrence of the specified element.
+`lastIndexOf()` method is the same as `indexOf()` method, but returns the
+position of the last occurrence of the specified element.
 
-  The `lastIndexOf()` method also accepts two parameter, with the second
-  parameter being optional.
+The `lastIndexOf()` method also accepts two parameter, with the second
+parameter being optional.
+
+- First parameter: Element to locate in the array.
+- Second parameter: The index to start the search at. Negative values will start
+  at the given position counting from the end, and search to the end.
+
+### includes()
+
+The `includes()` method looks for an item starting from index provided and returns true if found.
+
+`arr.includes(item, from)`
+
+The `includes()` method also accepts two parameter, with the second
+parameter being optional.
 
 - First parameter: Element to locate in the array.
 - Second parameter: The index to start the search at. Negative values will start

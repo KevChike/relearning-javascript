@@ -251,6 +251,10 @@ let beasts = ["ant", "bison", "camel", "duck", "bison"];
 console.log("indexOf() example 1: ", beasts.indexOf("bison", 2));
 
 // lastIndexOf() method
-var fruits9 = ["Apple", "Orange", "Apple", "Mango"];
-var lastAppearance = fruits9.lastIndexOf("Apple");
+let fruits9 = ["Apple", "Orange", "Apple", "Mango"];
+let lastAppearance = fruits9.lastIndexOf("Apple");
 console.log("lastIndexOf() example 1: ", lastAppearance);
+
+// includes() method
+let arr1 = [1, 0, 7, 3, 9, 2];
+console.log("includes() example 1: ", arr1.includes(3));
