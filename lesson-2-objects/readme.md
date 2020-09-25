@@ -65,3 +65,21 @@ delete person.lastName; // removes the lastName property from the object
   Example; `person["full name"]`
 - The last property in the list may end with a trailing comma.
 - An object declared as const can be modified.
+
+## Computed properties
+
+We can use square brackets in an object literal, when creating an object.
+That’s called computed properties.
+
+**Example**
+
+```
+let prop = "car";
+
+let person = {
+	name: "James",
+	[prop]: "Volvo",
+	age: 37,
+}
+console.log(person.car) // returns Volvo
+```

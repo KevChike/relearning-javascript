@@ -23,3 +23,13 @@ person1.age = 30;
 
 // Remove property of an object
 delete person1.lastName;
+
+// Computed properties
+let prop = "car";
+
+let person2 = {
+	name: "James",
+	[prop]: "Volvo",
+	age: 37,
+};
+console.log("Computed properties: ", person2.car);
