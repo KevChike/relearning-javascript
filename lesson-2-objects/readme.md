@@ -56,3 +56,12 @@ We can also remove a property from an object using the `delete` operator.
 
 delete person.lastName; // removes the lastName property from the object
 ```
+
+**NOTES:**
+
+- We can also use multiword property names, but then they must be quoted.
+  Example; `"full name" : "John Doe"`
+- For multiword properties, the dot access doesn’t work. You can use square brackets.
+  Example; `person["full name"]`
+- The last property in the list may end with a trailing comma.
+- An object declared as const can be modified.
