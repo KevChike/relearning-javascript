@@ -657,5 +657,18 @@ parameter being optional.
 
 ### find()
 
-The find() method returns the value of the first element in the provided array
-that satisfies the provided testing function.
+The `find()` method returns the value of the first element in the provided array
+that satisfies the provided testing function. Otherwise, it returns `undefined`.
+
+The `find()` method accepts a callback function and the callbback function accepts
+three (3) parameters in the callback function; **value** of the element,
+the **index** of the element and the **array** itself.
+
+**Example**
+
+```
+let scores1 = [5, 12, 8, 130, 44];
+
+let found = scores1.find((score) => score > 10);
+console.log(found); // returns 12
+```
