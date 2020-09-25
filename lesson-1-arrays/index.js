@@ -260,3 +260,9 @@ let arr1 = [1, 0, 7, 3, 9, 2];
 console.log("includes() example 1: ", arr1.includes(3));
 
 console.log("includes() example 2: ", arr1.includes(5));
+
+// find() method: returns the first element of an array that passes a test
+let scores1 = [5, 12, 8, 130, 44];
+
+let found = scores1.find((score) => score > 10);
+console.log("find() example 1: ", found);

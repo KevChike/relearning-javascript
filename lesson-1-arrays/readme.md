@@ -654,3 +654,8 @@ parameter being optional.
 - First parameter: Element to locate in the array.
 - Second parameter: The index to start the search at. Negative values will start
   at the given position counting from the end, and search to the end.
+
+### find()
+
+The find() method returns the value of the first element in the provided array
+that satisfies the provided testing function.
