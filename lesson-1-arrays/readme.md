@@ -672,3 +672,9 @@ let scores1 = [5, 12, 8, 130, 44];
 let found = scores1.find((score) => score > 10);
 console.log(found); // returns 12
 ```
+
+### findIndex()
+
+The `findIndex()` method returns the index of the first element in the array that
+satisfies the provided testing function. Otherwise, it returns -1, indicating
+that no element passed the test.

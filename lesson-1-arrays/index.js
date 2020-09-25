@@ -266,3 +266,12 @@ let scores1 = [5, 12, 8, 130, 44];
 
 let found = scores1.find((score) => score > 10);
 console.log("find() example 1: ", found);
+
+// findIndex(): returns the index of the first element of an array that passes a test
+let scores2 = [5, 12, 8, 130, 44];
+let index1 = scores2.findIndex((score) => score > 100);
+console.log("findIndex() example 1: ", index1);
+
+let scores3 = [5, 12, 8, 130, 44];
+let index2 = scores3.findIndex((score) => score > 300);
+console.log("findIndex() example 2: ", index2);
