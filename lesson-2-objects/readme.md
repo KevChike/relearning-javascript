@@ -83,3 +83,29 @@ let person = {
 }
 console.log(person.car) // returns Volvo
 ```
+
+### Property value shorthand
+
+When a property has the same name as a variable, it can be made shorter. Let's
+consider the example below.
+
+**Example**
+
+```
+function makeUser(name, age) {
+  return {
+    name: name,
+    age: age,
+    // ...other properties
+  };
+}
+
+// The above can be shorten to
+function makeUser(name, age) {
+  return {
+    name,
+    age,
+    // ...
+  };
+}
+```
