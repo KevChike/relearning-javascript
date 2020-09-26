@@ -33,3 +33,19 @@ let person2 = {
 	age: 37,
 };
 console.log("Computed properties: ", person2.car);
+
+let country = {
+	name: "JavaScript Republic",
+	population: 300000,
+	states: 450,
+};
+
+// Loop over the keys
+for (let key in country) {
+	console.log("iterate over keys of object: ", key);
+}
+
+// You can also loop over the values of the key
+for (let key in country) {
+	console.log("iterate over values of keys of object: ", country[key]);
+}
