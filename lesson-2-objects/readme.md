@@ -96,7 +96,6 @@ function makeUser(name, age) {
   return {
     name: name,
     age: age,
-    // ...other properties
   };
 }
 
@@ -105,7 +104,30 @@ function makeUser(name, age) {
   return {
     name,
     age,
-    // ...
   };
+}
+```
+
+### Using the “for…in” loop
+
+With the `for...in` loop, we can iterate over all the keys of an object.
+
+**Example**
+
+```
+let country = {
+	name: "JavaScript Republic",
+	population: 300000,
+	states: 450,
+}
+
+// Loop over the keys
+for (let key in country) {
+	console.log(key);
+}
+
+// You can also loop over the values of the key
+for (let key in country) {
+	console.log(country[key]);
 }
 ```
