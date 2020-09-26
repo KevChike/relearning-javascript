@@ -40,6 +40,7 @@ let country = {
 	states: 450,
 };
 
+// for..in loop
 // Loop over the keys
 for (let key in country) {
 	console.log("iterate over keys of object: ", key);
@@ -49,3 +50,12 @@ for (let key in country) {
 for (let key in country) {
 	console.log("iterate over values of keys of object: ", country[key]);
 }
+
+// in operator
+let car = {
+	color: "black",
+	doors: 4,
+	price: 2000,
+};
+
+if ("price" in car) console.log("Car is for sale");

@@ -131,3 +131,20 @@ for (let key in country) {
 	console.log(country[key]);
 }
 ```
+
+### in operator
+
+This operator checks for the existence of a given key in an object. There will
+be no error if the property doesn’t exist!
+
+**Example**
+
+```
+let car = {
+	color: "black",
+	doors: 4,
+	price: 2000,
+}
+
+if ('price' in car) console.log('Car is for sale');
+```
