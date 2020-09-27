@@ -148,3 +148,17 @@ let car = {
 
 if ('price' in car) console.log('Car is for sale');
 ```
+
+### Object copying, references
+
+One of the fundamental differences of objects vs primitives is that they are
+stored and copied “by reference”.
+
+Primitive values: strings, numbers, booleans – are assigned/copied “as a whole value”.
+
+For instance:
+
+```
+let message = "Hello!";
+let phrase = message;
+```
