@@ -162,3 +162,17 @@ For instance:
 let message = "Hello!";
 let phrase = message;
 ```
+
+From the example above, we have two independent variables (**message** and **phrase**),
+each one is storing the string "Hello!".
+
+But this is not the case of an **object**. When an object variable is copied,
+the reference is copied, but the object is not duplicated.
+
+**For instance**
+
+```
+let user = { name: "John" };
+
+let admin = user; // the reference is copied not the object
+```
